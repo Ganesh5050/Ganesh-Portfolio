@@ -537,7 +537,7 @@ export const Terminal = ({ isOpen, onClose }: TerminalProps) => {
       { pattern: /'projects'/g, color: 'text-green-400' },
       { pattern: /'about'/g, color: 'text-green-400' },
       // Specific letter coloring for "India"
-      { pattern: /\bI(?=ndia)/g, color: 'text-orange-400' },
+      { pattern: /\bIn(?=dia)/g, color: 'text-orange-400' },
       { pattern: /(?<=In)d(?=ia)/g, color: 'text-white' },
       { pattern: /(?<=Ind)ia\b/g, color: 'text-green-400' }
     ];
