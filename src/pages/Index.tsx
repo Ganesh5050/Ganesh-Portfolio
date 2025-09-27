@@ -582,6 +582,10 @@ const Index = () => {
                 key={project.name} 
                 to={`/project/${project.name.toLowerCase().replace(/\s+/g, '-')}`}
                 className="portfolio-card cursor-pointer group hover:scale-105 transition-all duration-300 block"
+                style={{
+                  animationDelay: `${(index + 70) * 0.5}s`,
+                  animation: projInView ? `fadeInUp 0.6s ease-out forwards` : 'none'
+                }}
               >
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="text-lg font-semibold text-foreground group-hover:accent-text transition-colors" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>
