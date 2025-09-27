@@ -296,10 +296,7 @@ const Index = () => {
 
       {/* Experience Section */}
       <section id="experience" className="py-20 px-6">
-        <div 
-          ref={expRef}
-          className={`max-w-4xl mx-auto fade-in-up ${expInView ? 'in-view' : ''}`}
-        >
+        <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-semibold mb-12 text-center text-foreground flex items-center justify-center gap-3" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>
             <Briefcase className="w-8 h-8 text-foreground" />
             Experience
