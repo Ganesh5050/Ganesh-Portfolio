@@ -536,10 +536,10 @@ export const Terminal = ({ isOpen, onClose }: TerminalProps) => {
       { pattern: /'work'/g, color: 'text-green-400' },
       { pattern: /'projects'/g, color: 'text-green-400' },
       { pattern: /'about'/g, color: 'text-green-400' },
-      // Specific letter coloring
-      { pattern: /\bI\b/g, color: 'text-orange-400' },
-      { pattern: /\bn\b/g, color: 'text-white' },
-      { pattern: /\bia\b/g, color: 'text-green-400' }
+      // Specific letter coloring for "India"
+      { pattern: /\bI(?=ndia)/g, color: 'text-orange-400' },
+      { pattern: /(?<=In)d(?=ia)/g, color: 'text-white' },
+      { pattern: /(?<=Ind)ia\b/g, color: 'text-green-400' }
     ];
 
     let result = text;
