@@ -535,7 +535,11 @@ export const Terminal = ({ isOpen, onClose }: TerminalProps) => {
       { pattern: /'skills'/g, color: 'text-green-400' },
       { pattern: /'work'/g, color: 'text-green-400' },
       { pattern: /'projects'/g, color: 'text-green-400' },
-      { pattern: /'about'/g, color: 'text-green-400' }
+      { pattern: /'about'/g, color: 'text-green-400' },
+      // Specific letter coloring
+      { pattern: /\bI\b/g, color: 'text-orange-400' },
+      { pattern: /\bn\b/g, color: 'text-white' },
+      { pattern: /\bia\b/g, color: 'text-green-400' }
     ];
 
     let result = text;
