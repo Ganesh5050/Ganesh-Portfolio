@@ -72,8 +72,8 @@ const ProjectDetail = () => {
       results: 'The platform successfully provides enterprise-grade functionality with intuitive user experience. Advanced analytics and workflow automation help businesses improve efficiency and decision-making processes.',
       tools: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Node.js', 'PostgreSQL', 'Redis', 'Docker'],
       links: {
-        website: 'https://enterprise-platform.example.com',
-        github: 'https://github.com/Ganesh5050/enterprise-platform'
+        website: 'https://office-show.vercel.app/',
+        github: 'https://github.com/Ganesh5050/Office-FLow'
       }
     }
   };
