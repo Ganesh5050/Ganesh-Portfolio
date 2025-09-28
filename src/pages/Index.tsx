@@ -3,12 +3,12 @@ import { ExternalLink, Mail, Github, Terminal, ArrowUpRight, Sun, Moon, Briefcas
 import { Button } from '@/components/ui/button';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { Terminal as TerminalComponent } from '@/components/Terminal';
-import heroBackground from '@/assets/hero-background.jpg';
 import companyLogo from '@/assets/company-logo.jpg';
 import siesLogo from '@/assets/logos/sies-logo.png';
 import siwsLogo from '@/assets/logos/siws-logo.png';
 import stJudesLogo from '@/assets/logos/st-judes-logo.png';
 import { Link } from 'react-router-dom';
+import { GridBackground } from '@/components/GridBackground';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('intro');
@@ -169,8 +169,8 @@ const Index = () => {
 
   return (
     <div className={`min-h-screen bg-background relative transition-colors duration-300 ${isDarkMode ? '' : 'light'}`}>
-      {/* Golden particle stream background effect */}
-      <div className="particle-effect"></div>
+      {/* Grid background effect - Home page only */}
+      <GridBackground />
       {/* Fixed Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -267,35 +267,29 @@ const Index = () => {
       <section 
         id="intro" 
         className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(28, 28, 30, 0.8), rgba(28, 28, 30, 0.9)), url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
       >
         <div 
           ref={heroRef}
           className={`max-w-5xl mx-auto text-center space-y-8 fade-in-up ${heroInView ? 'in-view' : ''}`}
         >
-          <h1 className="text-5xl md:text-7xl font-light tracking-tight text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 300 }}>
-            I am a <span className="accent-text italic font-medium" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 500, textDecoration: 'underline', textDecorationColor: 'white' }}>{typewriterText1}</span> with experience building software across <span className="accent-text italic font-medium" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 500, textDecoration: 'underline', textDecorationColor: 'white' }}>{typewriterText2}</span>
+          <h1 className="text-5xl md:text-7xl font-light tracking-tight text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 300 }}>
+            I am a <span className="accent-text italic font-medium" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 500, textDecoration: 'underline', textDecorationColor: isDarkMode ? 'white' : 'black' }}>{typewriterText1}</span> with experience building software across <span className="accent-text italic font-medium" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 500, textDecoration: 'underline', textDecorationColor: isDarkMode ? 'white' : 'black' }}>{typewriterText2}</span>
           </h1>
-          <div className="max-w-2xl mx-auto space-y-4 text-lg text-white/90" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
+          <div className="max-w-2xl mx-auto space-y-4 text-lg text-foreground/90" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
             <p>
               I've worked on projects ranging from AI-powered applications to scalable web platforms, 
               focusing on creating elegant solutions to complex problems. Currently pursuing B.E. in 
               Computer Science Engineering at SIES Graduate School of Technology (University of Mumbai).
             </p>
             <div className="flex justify-center mt-8">
-              <div className="w-6 h-6 border-b-2 border-white/30 animate-bounce"></div>
+              <div className="w-6 h-6 border-b-2 border-foreground/30 animate-bounce"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 px-6">
+      <section id="experience" className="py-20 px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-semibold mb-12 text-center text-foreground flex items-center justify-center gap-3" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>
             <Briefcase className="w-8 h-8 text-foreground" />
@@ -309,8 +303,8 @@ const Index = () => {
                     <div className="w-4 h-4 bg-background rounded-full"></div>
                   </div>
                 </div>
-                <h3 className="text-2xl font-semibold mb-2 text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>Coming Soon</h3>
-                <p className="text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
+                <h3 className="text-2xl font-semibold mb-2 text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>Coming Soon</h3>
+                <p className="text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
                   Professional work experience will be added here soon.
                 </p>
               </div>
@@ -320,7 +314,7 @@ const Index = () => {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-20 px-6">
+      <section id="education" className="py-20 px-6 relative z-10">
         <div 
           ref={eduRef}
           className={`max-w-4xl mx-auto fade-in-up ${eduInView ? 'in-view' : ''}`}
@@ -337,11 +331,11 @@ const Index = () => {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>B.E. - CSE - Internet of Things & Cyber Security Including Block Chain Technology</h3>
-                    <span className="text-sm text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>2022 - 2026</span>
+                    <h3 className="text-xl font-semibold text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>B.E. - CSE - Internet of Things & Cyber Security Including Block Chain Technology</h3>
+                    <span className="text-sm text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>2022 - 2026</span>
                   </div>
                   <p className="accent-text font-medium mb-3" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>SIES Graduate School of Technology (University of Mumbai)</p>
-                  <p className="text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
+                  <p className="text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
                     CGPA: 8.43 / 10
                   </p>
                 </div>
@@ -355,8 +349,8 @@ const Index = () => {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>12th Grade</h3>
-                    <span className="text-sm text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>2022</span>
+                    <h3 className="text-xl font-semibold text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>12th Grade</h3>
+                    <span className="text-sm text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>2022</span>
                   </div>
                   <p className="accent-text font-medium mb-3" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>South Indians' Welfare Society College</p>
                 </div>
@@ -370,8 +364,8 @@ const Index = () => {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>10th Grade</h3>
-                    <span className="text-sm text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>2020</span>
+                    <h3 className="text-xl font-semibold text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>10th Grade</h3>
+                    <span className="text-sm text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>2020</span>
                   </div>
                   <p className="accent-text font-medium mb-3" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>St Jude's High School</p>
                 </div>
@@ -382,7 +376,7 @@ const Index = () => {
       </section>
 
       {/* Extra Curricular Activities Section */}
-      <section id="activities" className="py-20 px-6">
+      <section id="activities" className="py-20 px-6 relative z-10">
         <div 
           ref={expRef}
           className={`max-w-4xl mx-auto fade-in-up ${expInView ? 'in-view' : ''}`}
@@ -399,10 +393,10 @@ const Index = () => {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>NSS Volunteer</h3>
+                    <h3 className="text-xl font-semibold text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>NSS Volunteer</h3>
                   </div>
                   <p className="accent-text font-medium mb-3" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>SIES Graduate School of Technology (University of Mumbai)</p>
-                  <p className="text-foreground mb-4" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
+                  <p className="text-white mb-4" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
                     Participated in street plays and awareness campaigns for social causes. Contributed to community development and leadership initiatives.
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -423,10 +417,10 @@ const Index = () => {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>Training and Placement Coordinator</h3>
+                    <h3 className="text-xl font-semibold text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>Training and Placement Coordinator</h3>
                   </div>
                   <p className="accent-text font-medium mb-3" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>SIES Graduate School of Technology (University of Mumbai)</p>
-                  <p className="text-foreground mb-4" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
+                  <p className="text-white mb-4" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
                     Coordinated between students and recruiters for placement drives. Managed logistics and supported events.
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -440,17 +434,17 @@ const Index = () => {
               </div>
             </div>
 
-          <div className="portfolio-card">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg overflow-hidden">
+            <div className="portfolio-card">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg overflow-hidden">
                   <img src={companyLogo} alt="Company" className="w-full h-full object-cover" />
-              </div>
-              <div className="flex-1">
-                <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>Class Representative</h3>
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>Class Representative</h3>
                   </div>
                   <p className="accent-text font-medium mb-3" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>SIES Graduate School of Technology (University of Mumbai)</p>
-                  <p className="text-foreground mb-4" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
+                  <p className="text-white mb-4" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
                     Acted as liaison between faculty and students. Facilitated communication and represented student interests.
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -468,7 +462,7 @@ const Index = () => {
       </section>
 
       {/* Hobbies Section */}
-      <section id="hobbies" className="py-20 px-6">
+      <section id="hobbies" className="py-20 px-6 relative z-10">
         <div 
           ref={hobbiesRef}
           className={`max-w-4xl mx-auto fade-in-up ${hobbiesInView ? 'in-view' : ''}`}
@@ -487,7 +481,7 @@ const Index = () => {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>Basketball</h3>
+                    <h3 className="text-xl font-semibold text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>Basketball</h3>
                   </div>
                   <p className="accent-text font-medium mb-3" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>Passionate Player & Team Member</p>
                 </div>
@@ -495,14 +489,14 @@ const Index = () => {
             </div>
 
             {/* Swimming */}
-            <div className="portfolio-card">
-              <div className="flex items-start gap-4">
+          <div className="portfolio-card">
+            <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg overflow-hidden bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
                   <span className="text-white font-bold text-lg">🏊</span>
               </div>
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>Swimming</h3>
+                    <h3 className="text-xl font-semibold text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>Swimming</h3>
                   </div>
                   <p className="accent-text font-medium mb-3" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>Regular Swimmer & Water Enthusiast</p>
                 </div>
@@ -513,7 +507,7 @@ const Index = () => {
       </section>
 
       {/* Research Section */}
-      <section id="research" className="py-20 px-6">
+      <section id="research" className="py-20 px-6 relative z-10">
         <div 
           ref={resRef}
           className={`max-w-4xl mx-auto fade-in-up ${resInView ? 'in-view' : ''}`}
@@ -530,8 +524,8 @@ const Index = () => {
                     <div className="w-4 h-4 bg-background rounded-full"></div>
               </div>
                 </div>
-                <h3 className="text-2xl font-semibold mb-2 text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>Coming Soon</h3>
-                <p className="text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
+                <h3 className="text-2xl font-semibold mb-2 text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>Coming Soon</h3>
+                <p className="text-white" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
                   Research projects and publications will be added here soon.
                 </p>
               </div>
@@ -541,7 +535,7 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6">
+      <section id="projects" className="py-20 px-6 relative z-10">
         <div 
           ref={projRef}
           className={`max-w-6xl mx-auto fade-in-up ${projInView ? 'in-view' : ''}`}
@@ -588,12 +582,12 @@ const Index = () => {
                 }}
               >
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-foreground group-hover:accent-text transition-colors" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>
+                  <h3 className="text-lg font-semibold text-white group-hover:accent-text transition-colors" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>
                     {project.name}
                   </h3>
                   <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-accent transition-colors" />
                 </div>
-                <p className="text-foreground text-sm mb-4" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
+                <p className="text-white text-sm mb-4" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-1">
@@ -610,7 +604,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-border">
+      <footer className="py-8 px-6 border-t border-border relative z-10 bg-background">
         <div className="max-w-6xl mx-auto flex items-center justify-between text-sm text-muted-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" style={{ boxShadow: '0 0 8px rgba(34, 197, 94, 0.6), 0 0 16px rgba(34, 197, 94, 0.4)' }}></div>
