@@ -9,6 +9,7 @@ import siwsLogo from '@/assets/logos/siws-logo.png';
 import stJudesLogo from '@/assets/logos/st-judes-logo.png';
 import { Link } from 'react-router-dom';
 import { GridBackground } from '@/components/GridBackground';
+import { GlowingEffect } from '@/components/ui/glowing-effect';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('intro');
@@ -295,7 +296,8 @@ const Index = () => {
             <Briefcase className="w-8 h-8 text-foreground" />
             Experience
           </h2>
-          <div className="portfolio-card">
+          <div className="portfolio-card relative">
+            <GlowingEffect disabled={false} proximity={50} spread={120} variant={isDarkMode ? "default" : "light"} />
             <div className="flex items-center justify-center py-12">
               <div className="text-center">
                 <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -324,7 +326,8 @@ const Index = () => {
             Education
           </h2>
           <div className="space-y-6">
-            <div className="portfolio-card">
+            <div className="portfolio-card relative">
+              <GlowingEffect disabled={false} proximity={50} spread={120} variant={isDarkMode ? "default" : "light"} />
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg overflow-hidden bg-white p-2">
                   <img src={siesLogo} alt="SIES Graduate School of Technology (University of Mumbai)" className="w-full h-full object-contain" />
@@ -342,7 +345,8 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="portfolio-card">
+            <div className="portfolio-card relative">
+              <GlowingEffect disabled={false} proximity={50} spread={120} variant={isDarkMode ? "default" : "light"} />
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg overflow-hidden bg-white p-2">
                   <img src={siwsLogo} alt="South Indians' Welfare Society College" className="w-full h-full object-contain" />
@@ -357,7 +361,8 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="portfolio-card">
+            <div className="portfolio-card relative">
+              <GlowingEffect disabled={false} proximity={50} spread={120} variant={isDarkMode ? "default" : "light"} />
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg overflow-hidden bg-white p-2">
                   <img src={stJudesLogo} alt="St Jude's High School" className="w-full h-full object-contain" />
@@ -386,7 +391,8 @@ const Index = () => {
             Extra Curricular Activities
           </h2>
           <div className="space-y-6">
-            <div className="portfolio-card">
+            <div className="portfolio-card relative">
+              <GlowingEffect disabled={false} proximity={50} spread={120} variant={isDarkMode ? "default" : "light"} />
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg overflow-hidden">
                   <img src={companyLogo} alt="Company" className="w-full h-full object-cover" />
@@ -410,7 +416,8 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="portfolio-card">
+            <div className="portfolio-card relative">
+              <GlowingEffect disabled={false} proximity={50} spread={120} variant={isDarkMode ? "default" : "light"} />
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg overflow-hidden">
                   <img src={companyLogo} alt="Company" className="w-full h-full object-cover" />
@@ -434,7 +441,8 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="portfolio-card">
+            <div className="portfolio-card relative">
+              <GlowingEffect disabled={false} proximity={50} spread={120} variant={isDarkMode ? "default" : "light"} />
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg overflow-hidden">
                   <img src={companyLogo} alt="Company" className="w-full h-full object-cover" />
@@ -474,7 +482,8 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Basketball */}
-          <div className="portfolio-card">
+          <div className="portfolio-card relative">
+            <GlowingEffect disabled={false} proximity={50} spread={120} variant={isDarkMode ? "default" : "light"} />
             <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg overflow-hidden bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
                   <span className="text-white font-bold text-lg">🏀</span>
@@ -489,7 +498,8 @@ const Index = () => {
             </div>
 
             {/* Swimming */}
-          <div className="portfolio-card">
+          <div className="portfolio-card relative">
+            <GlowingEffect disabled={false} proximity={50} spread={120} variant={isDarkMode ? "default" : "light"} />
             <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg overflow-hidden bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
                   <span className="text-white font-bold text-lg">🏊</span>
@@ -516,7 +526,8 @@ const Index = () => {
             <Microscope className="w-8 h-8 text-foreground" />
             Research
           </h2>
-          <div className="portfolio-card">
+          <div className="portfolio-card relative">
+            <GlowingEffect disabled={false} proximity={50} spread={120} variant={isDarkMode ? "default" : "light"} />
             <div className="flex items-center justify-center py-12">
               <div className="text-center">
                 <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -575,12 +586,13 @@ const Index = () => {
               <Link 
                 key={project.name} 
                 to={`/project/${project.name.toLowerCase().replace(/\s+/g, '-')}`}
-                className="portfolio-card cursor-pointer group hover:scale-105 transition-all duration-300 block"
+                className="portfolio-card cursor-pointer group hover:scale-105 transition-all duration-300 block relative"
                 style={{
                   animationDelay: `${(index + 70) * 0.5}s`,
                   animation: projInView ? `fadeInUp 0.6s ease-out forwards` : 'none'
                 }}
               >
+                <GlowingEffect disabled={false} proximity={50} spread={120} variant={isDarkMode ? "default" : "light"} />
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="text-lg font-semibold text-white group-hover:accent-text transition-colors" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>
                     {project.name}
