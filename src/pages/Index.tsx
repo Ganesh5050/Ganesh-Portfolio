@@ -10,6 +10,7 @@ import stJudesLogo from '@/assets/logos/st-judes-logo.png';
 import { Link } from 'react-router-dom';
 import { GridBackground } from '@/components/GridBackground';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
+import { ThemeTogglerButton } from '@/components/animate-ui/components/buttons/theme-toggler';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('intro');
@@ -254,12 +255,11 @@ const Index = () => {
             <button className="portfolio-link text-muted-foreground hover:text-foreground">
               *
             </button>
-            <button 
-              onClick={toggleTheme}
-              className="portfolio-link text-muted-foreground hover:text-foreground transition-all duration-300 bg-accent/10 px-2 py-1 rounded hover:bg-accent/20"
-            >
-              {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </button>
+            <ThemeTogglerButton 
+              isDarkMode={isDarkMode}
+              setIsDarkMode={setIsDarkMode}
+              modes={['light', 'dark']}
+            />
           </div>
         </div>
       </header>
