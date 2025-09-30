@@ -75,6 +75,20 @@ const ProjectDetail = () => {
         website: 'https://office-show.vercel.app/',
         github: 'https://github.com/Ganesh5050/Office-FLow'
       }
+    },
+    'regalytics-ui---compliance-management-platform': {
+      title: 'Regalytics UI - Compliance Management Platform',
+      date: 'Sep 2025 - Nov 2025',
+      overview: 'Enterprise Financial Compliance CRM platform with React/TypeScript frontend and Node.js/Express backend. Integrated n8n workflow automation for KYC processes, real-time data synchronization, and comprehensive CRM features.',
+      background: 'Developing this compliance management platform required understanding complex financial regulations and KYC (Know Your Customer) processes. The system needed to handle sensitive financial data while providing seamless workflow automation and real-time synchronization across multiple departments.',
+      architecture: 'Built with React and TypeScript for robust frontend development, the platform uses Node.js and Express.js for the backend API. n8n workflow automation handles KYC processes, while PostgreSQL and SQLite manage data persistence. Docker ensures consistent deployment, and the platform is deployed on Railway and Vercel with PWA capabilities for mobile access.',
+      challenges: 'Implementing secure KYC workflow automation while maintaining compliance with financial regulations was the primary challenge. Managing real-time data synchronization across multiple systems and ensuring PWA functionality across different devices required careful architecture design and testing.',
+      results: 'The platform successfully automates KYC processes and provides comprehensive CRM functionality for financial compliance. Real-time data synchronization and PWA capabilities ensure accessibility across all devices, while the integrated workflow automation significantly reduces manual processing time.',
+      tools: ['React', 'TypeScript', 'Node.js', 'Express.js', 'n8n', 'PostgreSQL', 'SQLite', 'Docker', 'Railway', 'Vercel', 'REST APIs', 'WebSockets', 'PWA', 'Responsive Design'],
+      links: {
+        website: 'https://regalytics.vercel.app/',
+        github: 'https://github.com/Ganesh5050/Regalytics'
+      }
     }
   };
 

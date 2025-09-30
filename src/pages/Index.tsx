@@ -581,6 +581,11 @@ const Index = () => {
                 name: 'Enterprise Platform',
                 description: 'Premium scalable office management system with enterprise-level UI/UX',
                 tech: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion']
+              },
+              {
+                name: 'Regalytics UI - Compliance Management Platform',
+                description: 'Enterprise Financial Compliance CRM platform with React/TypeScript frontend and Node.js/Express backend. Integrated n8n workflow automation for KYC processes, real-time data synchronization, and comprehensive CRM features.',
+                tech: ['React', 'TypeScript', 'Node.js', 'Express.js', 'n8n', 'PostgreSQL', 'SQLite', 'Docker', 'Railway', 'Vercel', 'REST APIs', 'WebSockets', 'PWA', 'Responsive Design']
               }
             ].map((project, index) => (
               <Link 
