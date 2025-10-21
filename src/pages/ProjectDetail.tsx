@@ -6,6 +6,20 @@ const ProjectDetail = () => {
 
   // Project data - you can expand this with more details
   const projects = {
+    'writeeasy---ai-powered-api-documentation-platform': {
+      title: 'WriteEasy - AI-Powered API Documentation Platform',
+      date: 'September 2025 - January 2026',
+      overview: 'WriteEasy is a comprehensive API documentation and development platform that streamlines the entire API lifecycle. Users can create and manage API specifications, automatically generate SDKs in multiple languages, and interact with an AI assistant powered by Google Gemini for instant help. The platform features a modern, responsive UI with real-time updates and seamless authentication via email/password and OAuth providers.',
+      background: 'Built to address the complexity and time-consuming nature of creating and maintaining API documentation, WriteEasy emerged from the need for a unified platform that combines documentation generation, SDK creation, and AI assistance. Traditional API documentation tools often lack integration with modern AI capabilities and require manual updates. This project solves these problems by providing an all-in-one solution with intelligent automation and a developer-friendly interface.',
+      architecture: 'The application follows a modern full-stack architecture with a React/TypeScript frontend deployed on Vercel and a Node.js/Express backend on Render. Supabase serves as the PostgreSQL database with built-in authentication and Row-Level Security (RLS) policies for data protection. The AI chat feature integrates Google Gemini 2.0 Flash with automatic retry logic for high availability. The frontend uses React Router for navigation, Context API for state management, and shadcn/ui components for a polished, accessible interface.',
+      challenges: 'The primary challenge was integrating multiple authentication providers (email/password, Google, GitHub, Microsoft, Discord) while maintaining security through JWT tokens and RLS policies. Additionally, transitioning from OpenAI to Google Gemini required adapting the API integration and implementing retry logic to handle server overload issues. Managing CORS configurations across development and production environments while ensuring seamless frontend-backend communication required careful environment variable management and testing across multiple deployment platforms.',
+      results: 'Successfully deployed a production-ready SaaS application with full authentication, AI chat capabilities, and demo request management. The project demonstrated proficiency in full-stack development, API integration, cloud deployment, and security best practices. Key learnings included implementing resilient AI integrations with fallback mechanisms, managing complex state across distributed systems, and optimizing database queries with proper indexing and RLS policies for scalability.',
+      tools: ['React', 'TypeScript', 'Vite', 'Node.js', 'Express.js', 'PostgreSQL', 'Supabase', 'Google Gemini AI', 'JWT', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion', 'OAuth 2.0', 'Vercel', 'Render'],
+      links: {
+        website: 'https://write-easy.vercel.app',
+        github: 'https://github.com/Ganesh5050/WriteEasy'
+      }
+    },
     'gkp-basketball-club-website': {
       title: 'GKP Basketball Club Website',
       date: 'Aug 2025 - Sep 2025',

@@ -558,6 +558,21 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
+                name: 'WriteEasy - AI-Powered API Documentation Platform',
+                description: 'A full-stack SaaS platform that transforms API specifications into beautiful documentation, generates SDKs, and provides AI-powered chat assistance using Google Gemini, featuring seamless authentication and real-time collaboration.',
+                tech: ['React', 'TypeScript', 'Vite', 'Node.js', 'Express.js', 'PostgreSQL', 'Supabase', 'Google Gemini AI', 'JWT', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion', 'OAuth 2.0', 'Vercel', 'Render']
+              },
+              {
+                name: 'Enterprise Platform',
+                description: 'Premium scalable office management system with enterprise-level UI/UX',
+                tech: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion']
+              },
+              {
+                name: 'Regalytics UI - Compliance Management Platform',
+                description: 'Enterprise Financial Compliance CRM platform with React/TypeScript frontend and Node.js/Express backend. Integrated n8n workflow automation for KYC processes, real-time data synchronization, and comprehensive CRM features.',
+                tech: ['React', 'TypeScript', 'Node.js', 'Express.js', 'n8n', 'PostgreSQL', 'SQLite', 'Docker', 'Railway', 'Vercel', 'REST APIs', 'WebSockets', 'PWA', 'Responsive Design']
+              },
+              {
                 name: 'GKP Basketball Club Website',
                 description: 'Comprehensive basketball club website with training schedules, image gallery, QR code generator, and WhatsApp integration',
                 tech: ['ReactJS', 'TypeScript', 'Vite', 'Tailwind CSS', 'Git', 'GitHub', 'Vercel', 'Responsive Design', 'UI/UX Design', 'SEO Optimization', 'WhatsApp Integration', 'Framer Motion']
@@ -576,16 +591,6 @@ const Index = () => {
                 name: 'Marketplace Blockchain',
                 description: 'Secure and transparent online marketplace built on blockchain technology',
                 tech: ['Ethereum', 'Solidity', 'Web3.js', 'JavaScript']
-              },
-              {
-                name: 'Enterprise Platform',
-                description: 'Premium scalable office management system with enterprise-level UI/UX',
-                tech: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion']
-              },
-              {
-                name: 'Regalytics UI - Compliance Management Platform',
-                description: 'Enterprise Financial Compliance CRM platform with React/TypeScript frontend and Node.js/Express backend. Integrated n8n workflow automation for KYC processes, real-time data synchronization, and comprehensive CRM features.',
-                tech: ['React', 'TypeScript', 'Node.js', 'Express.js', 'n8n', 'PostgreSQL', 'SQLite', 'Docker', 'Railway', 'Vercel', 'REST APIs', 'WebSockets', 'PWA', 'Responsive Design']
               }
             ].map((project, index) => (
               <Link 
