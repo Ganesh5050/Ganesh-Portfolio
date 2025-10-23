@@ -558,6 +558,11 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
+                name: 'Maya-Web - AI Website Builder',
+                description: 'AI-powered website builder with multi-model AI support, real-time preview, and Supabase authentication for creating modern web applications',
+                tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Supabase (PostgreSQL + Auth)', 'GROQ (Llama 3.3)', 'Google Gemini', 'Sandpack', 'Vercel', 'GitHub Actions']
+              },
+              {
                 name: 'Momentum',
                 description: 'AI-powered investment intelligence platform for Indian stock markets with real-time earnings tracking, portfolio sync, and natural language stock discovery',
                 tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Radix UI', 'TanStack Query', 'Recharts', 'Lucide React', 'Vercel']

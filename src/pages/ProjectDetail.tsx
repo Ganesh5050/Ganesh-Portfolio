@@ -6,6 +6,20 @@ const ProjectDetail = () => {
 
   // Project data - you can expand this with more details
   const projects = {
+    'maya-web---ai-website-builder': {
+      title: 'Maya-Web - AI Website Builder',
+      date: 'October 2024 - Present',
+      overview: 'Maya-Web is a next-generation AI-powered website builder that enables users to create professional, dynamic websites through natural language prompts. The platform integrates multiple AI models (GROQ Llama 3.3, Google Gemini) to generate multi-file React projects with real-time preview capabilities. Features include user authentication, project management, template marketplace, and automated deployment workflows.',
+      background: 'Building this project required understanding AI prompt engineering, real-time code generation, and browser-based development environments. The platform needed to provide a seamless experience similar to modern tools like Bolt.new and Lovable.dev while utilizing only free AI models and services. The challenge was creating a production-ready application that could generate unique, high-quality websites without relying on paid AI services.',
+      architecture: 'Built with React and TypeScript using Vite for fast development, the platform leverages Tailwind CSS and shadcn/ui for modern, responsive design. The backend uses Supabase for authentication, PostgreSQL database, and real-time features. AI integration includes GROQ for Llama 3.3 models and Google Gemini for content generation. Sandpack provides live, in-browser preview with hot reload capabilities. The application features an agent-based workflow (plan → generate → validate → fix) to create complex, multi-file React projects with proper structure and dependencies. Security is ensured through environment variable management and GitHub Secret Scanning compliance.',
+      challenges: 'The main challenges included ensuring AI quality control with free models through aggressive prompt engineering and randomization, implementing multi-file generation with complex state management, preventing API key exposure while maintaining easy deployment, integrating Sandpack for real-time preview with hot reload, resolving Vercel routing conflicts for static assets, and handling authentication persistence. Each challenge was addressed through careful architecture design, proper security practices, and extensive testing across different deployment scenarios.',
+      results: 'The platform successfully generates production-ready websites with multi-file React projects (6-10+ components), real-time Sandpack preview with live editing, user authentication and project persistence, template marketplace, and automated Vercel deployment pipeline. Key achievements include prompt engineering optimization that brings free AI models to 70% of paid model quality, build time of ~2 minutes on Vercel, AI generation in 5-15 seconds per website, and zero-downtime deployment with GitHub Actions automation. The project demonstrates mastery of AI integration, browser security, real-time collaboration, and modern deployment practices.',
+      tools: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Supabase (PostgreSQL + Auth)', 'GROQ (Llama 3.3)', 'Google Gemini', 'Sandpack', 'Vercel', 'GitHub Actions'],
+      links: {
+        website: 'https://maya-web-sand.vercel.app',
+        github: 'https://github.com/Ganesh5050/Maya-Web'
+      }
+    },
     'momentum': {
       title: 'Momentum',
       date: 'Oct 2024 - Jan 2025',
