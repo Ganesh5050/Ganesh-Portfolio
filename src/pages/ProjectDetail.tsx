@@ -6,6 +6,62 @@ const ProjectDetail = () => {
 
   // Project data - you can expand this with more details
   const projects = {
+    'momentum': {
+      title: 'Momentum',
+      date: 'Oct 2024 - Jan 2025',
+      overview: 'An intelligent investment platform designed for the Indian stock market that transforms complex NSE/BSE data, earnings reports, and market news into actionable insights through a beautifully designed interface. Features real-time earnings tracking, AI-powered stock discovery, and automated portfolio synchronization with Indian brokers like Zerodha, Upstox, Angel One, and Groww.',
+      background: 'Building this project required understanding Indian market structure (NSE/BSE), broker APIs, and SEBI regulations. The platform needed to deliver institutional-grade insights while remaining accessible at ₹30/month, striking the perfect balance between free broker apps and expensive Bloomberg terminals.',
+      architecture: 'Built with React 18 and TypeScript for the frontend, leveraging Vite for fast builds and Tailwind CSS with custom glass morphism design system. Uses shadcn/ui component library with 60+ reusable components following atomic design principles. State management through TanStack Query with scroll-triggered animations using Intersection Observer API. Production deployment on Vercel with CI/CD via GitHub Actions.',
+      challenges: 'The main challenge was achieving pixel-perfect replication of sophisticated animations and micro-interactions while adapting all content for Indian markets. Implementing a real-time SVG clock required precise trigonometric calculations. Creating smooth scroll-reveal animations demanded careful performance optimization. Balancing glass morphism aesthetics with accessibility required extensive design iteration.',
+      results: 'Successfully delivered a production-ready platform with 6 complete pages and 60+ components. The platform demonstrates advanced React patterns including custom hooks, compound components, and performance optimization. Key learnings include mastering Tailwind\'s utility-first approach, implementing complex SVG animations, and creating scalable component architectures for localized markets.',
+      tools: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Radix UI', 'TanStack Query', 'Recharts', 'Lucide React', 'Vercel'],
+      links: {
+        website: 'https://momentum-drab-five.vercel.app',
+        github: 'https://github.com/Ganesh5050/Momentum'
+      }
+    },
+    'axion': {
+      title: 'Axion',
+      date: 'October 2024',
+      overview: 'An AI-first workspace platform website featuring 15+ fully responsive pages, advanced dropdown navigation systems, and a comprehensive showcase of solutions and products. The platform demonstrates enterprise-grade UI/UX design with smooth animations, intuitive navigation, and a complete information architecture for showcasing AI-powered workspace tools across recruiting, consulting, sales, marketing, and finance solutions.',
+      background: 'Building this project required deep understanding of modern web design patterns and user experience principles. The platform needed to deliver a pixel-perfect, professional appearance while maintaining excellent performance and accessibility. Special attention was given to creating reusable component architecture and ensuring seamless navigation across all pages with consistent branding.',
+      architecture: 'Built with React 18 and TypeScript for type-safe development, the platform uses Vite for lightning-fast build times and hot module replacement. The component library leverages shadcn/ui built on Radix UI primitives for accessible components. React Router v6 handles client-side routing for smooth transitions. Tailwind CSS provides utility-first styling with custom design tokens, while Vercel\'s edge network ensures global performance.',
+      challenges: 'The main challenge was implementing custom hover-based dropdown menus with precise timing controls to prevent premature closing. Creating 15+ unique pages with consistent design language while maintaining code reusability required careful component abstraction. Ensuring pixel-perfect responsive design across mobile, tablet, and desktop breakpoints demanded meticulous attention to layout details and spacing.',
+      results: 'Successfully deployed a production-ready website with 108 files and 16,665+ lines of code. The platform features seamless navigation with custom dropdown menus, 5 solution pages, 4 product pages, and comprehensive user flows for demo requests, authentication, and content exploration. The site achieves excellent Core Web Vitals scores and demonstrates mastery of modern React patterns and professional UI/UX implementation.',
+      tools: ['React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Radix UI', 'React Router v6', 'Vite', 'Lucide Icons', 'Vercel'],
+      links: {
+        website: 'https://axion-pi-six.vercel.app',
+        github: 'https://github.com/Ganesh5050/Axion'
+      }
+    },
+    'owl-ai': {
+      title: 'Owl AI',
+      date: 'October 2024 - January 2025',
+      overview: 'Owl AI is a comprehensive AI-powered coding assistant platform designed to accelerate developer workflow with real-time context awareness and semantic understanding. The platform features 12 fully-functional pages, dynamic theme switching with custom backgrounds, and a modern responsive design optimized for all devices.',
+      background: 'Building this project required creating a production-ready marketing website that showcases AI coding capabilities while implementing a unique theme-switching experience. The platform needed to balance visual appeal with performance optimization and maintain brand consistency across all pages.',
+      architecture: 'Built with React 18 and TypeScript for type safety, the platform uses Vite for lightning-fast builds and hot module replacement. The frontend leverages shadcn/ui components for consistent UI patterns, Tailwind CSS for styling, and next-themes for seamless dark/light mode transitions. React Router handles client-side routing across 12 pages, while custom hooks manage scroll animations and theme state.',
+      challenges: 'The main challenge was implementing dynamic background image switching based on theme selection while maintaining smooth transitions and optimal performance. Creating a reusable component architecture with shadcn/ui required careful planning to ensure consistency. Optimizing the production build to achieve a 136 KB gzipped bundle while including full-page backgrounds and animations required strategic code-splitting and image optimization.',
+      results: 'The platform successfully delivers a production-ready website with zero linting errors and excellent performance metrics. The unique theme-switching feature (dark mode with owl imagery, light mode with forest scenes) creates an engaging user experience. Deployed on Vercel with automatic CI/CD from GitHub, the site achieves fast load times and responsive design across all devices. Key metrics: 100% lighthouse accessibility score, 123 KB JS bundle (gzipped), fully responsive from 320px to 4K displays.',
+      tools: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'React Router', 'next-themes', 'Lucide Icons', 'Vercel'],
+      links: {
+        website: 'https://owl-omega.vercel.app',
+        github: 'https://github.com/Ganesh5050/Owl'
+      }
+    },
+    'gen.work': {
+      title: 'gen.work',
+      date: 'October 2024 - January 2025',
+      overview: 'gen.work is a production-ready AI workforce platform featuring autonomous, policy-aware agents that automate and handle the busywork behind enterprise operations teams. The platform includes 13 fully functional pages, a complete admin dashboard, AI-powered task execution, and real-time analytics. It showcases pixel-perfect UI design with advanced animations and interactive components.',
+      background: 'Building this enterprise-grade platform required deep understanding of modern web architecture, AI integration patterns, and enterprise security practices. The project demanded pixel-perfect implementation matching production reference designs while maintaining performance, accessibility, and scalability. Special attention was given to creating a seamless user experience across all devices with sophisticated animations and micro-interactions.',
+      architecture: 'The platform uses a modern full-stack architecture with React 18 and TypeScript on the frontend, powered by Vite for blazing-fast development. The backend runs on Node.js with Express, featuring JWT authentication, bcrypt password hashing, and comprehensive API endpoints. Supabase PostgreSQL provides the database layer with Row Level Security (RLS) policies. The frontend implements advanced patterns including React Hook Form for validation, TanStack Query for data fetching, Framer Motion for animations, and custom components for interactive workflows. The entire stack is containerized with Docker and deployed on Vercel with CI/CD pipelines via GitHub Actions.',
+      challenges: 'The main challenges included creating pixel-perfect clones of complex UI designs with intricate animations, implementing a sophisticated mega-menu dropdown system, building animated workflow diagrams with rotating elements and pulsing states, integrating multiple third-party services (OpenAI, email, analytics, live chat), and ensuring seamless state management across 60+ components. Performance optimization for heavy animations while maintaining 60fps required careful use of GPU acceleration and component memoization. Additionally, implementing a complete authentication system with admin dashboard, full CRUD operations for tasks and workspaces, and comprehensive error handling across the entire stack presented significant architectural decisions.',
+      results: 'Successfully delivered a production-ready platform with 147 files and 33,000+ lines of code. The application features 13 fully functional pages, complete backend API with 8 route groups, Supabase integration with 4 database schemas, email notification system, Google Analytics integration, and live chat support. The platform demonstrates enterprise-grade security with JWT auth, rate limiting, CORS, and Helmet protection. Key metrics include: responsive design across all screen sizes, automated CI/CD pipeline with GitHub Actions, comprehensive documentation (5+ markdown guides), and full Vercel deployment configuration. The project strengthened skills in advanced React patterns, TypeScript best practices, API design, database modeling, animation techniques, and DevOps workflows.',
+      tools: ['React 18', 'TypeScript', 'Node.js', 'Express', 'Supabase PostgreSQL', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion', 'OpenAI API', 'JWT Auth', 'Nodemailer', 'Docker', 'Vercel'],
+      links: {
+        website: 'https://genwork.vercel.app',
+        github: 'https://github.com/Ganesh5050/Gen.work'
+      }
+    },
     'writeeasy---ai-powered-api-documentation-platform': {
       title: 'WriteEasy - AI-Powered API Documentation Platform',
       date: 'September 2025 - January 2026',

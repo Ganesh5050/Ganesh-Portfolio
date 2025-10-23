@@ -558,6 +558,26 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
+                name: 'Momentum',
+                description: 'AI-powered investment intelligence platform for Indian stock markets with real-time earnings tracking, portfolio sync, and natural language stock discovery',
+                tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Radix UI', 'TanStack Query', 'Recharts', 'Lucide React', 'Vercel']
+              },
+              {
+                name: 'Axion',
+                description: 'AI-first workspace platform - Pixel-perfect modern web application with advanced navigation, responsive design, and comprehensive product showcase',
+                tech: ['React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Radix UI', 'React Router v6', 'Vite', 'Lucide Icons', 'Vercel']
+              },
+              {
+                name: 'Owl AI',
+                description: 'AI-powered coding assistant platform with intelligent code completion, semantic understanding, and theme-adaptive interface featuring dynamic background transitions',
+                tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'React Router', 'next-themes', 'Lucide Icons', 'Vercel']
+              },
+              {
+                name: 'gen.work',
+                description: 'Next-generation AI workforce platform with autonomous AI workers for IT, HR, Procurement, Legal, and Finance operations teams',
+                tech: ['React 18', 'TypeScript', 'Node.js', 'Express', 'Supabase PostgreSQL', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion', 'OpenAI API', 'JWT Auth', 'Nodemailer', 'Docker', 'Vercel']
+              },
+              {
                 name: 'WriteEasy - AI-Powered API Documentation Platform',
                 description: 'A full-stack SaaS platform that transforms API specifications into beautiful documentation, generates SDKs, and provides AI-powered chat assistance using Google Gemini, featuring seamless authentication and real-time collaboration.',
                 tech: ['React', 'TypeScript', 'Vite', 'Node.js', 'Express.js', 'PostgreSQL', 'Supabase', 'Google Gemini AI', 'JWT', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion', 'OAuth 2.0', 'Vercel', 'Render']
